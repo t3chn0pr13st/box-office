@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { LinkStyled, NavList } from './Navs.styled'
 
 const LINKS = [
     { to: '/', text: 'Home' },
@@ -7,17 +7,18 @@ const LINKS = [
 ]
 
 const Navs = () => {
+
     return (
         <div>
-            <ul>
+            <NavList>
                 {
                     LINKS.map(item => 
                         <li key={item.to}>
-                            <Link to={item.to}>{item.text}</Link>
+                            <LinkStyled exact to={item.to}>{item.text}</LinkStyled>
                         </li>
                     )
                 }
-            </ul>
+            </NavList>
         </div>
     )
 }
