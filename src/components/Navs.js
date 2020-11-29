@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { LinkStyled, NavList } from './Navs.styled'
 
 const LINKS = [
@@ -23,4 +23,4 @@ const Navs = () => {
     )
 }
 
-export default Navs;
+export default memo(Navs);
